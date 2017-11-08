@@ -4,13 +4,21 @@
   "description": "Derping around with SynapticJS",
   "main": "index.js",
   "scripts": {
-    "start": "$(npm bin)/http-server -p 1337",
+    "prestart": "npm install",
+    "start": "nodemon --exec \"./run.sh\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserify": "^14.5.0",
     "http-server": "^0.10.0",
     "synaptic": "^1.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.5.0-alpha4"
+  },
+  "nodemonConfig":{
+    "ignore":["work.js"]
   }
 }
